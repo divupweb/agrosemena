@@ -1928,7 +1928,7 @@ max-width: 200px;
 	justify-content: center;
 	flex-wrap: wrap;
 }
-.login-page{
+.page-align{
 	display:flex;
 	justify-content: space-between;
 }
@@ -1969,6 +1969,9 @@ max-width: 200px;
 #strinfo img{
 	max-width: 100%;
 	height: auto !important;
+}
+.main-content #strinfo td img {
+	max-width: none;
 }
 .checkout-content{
 	display: flex;
@@ -2062,7 +2065,7 @@ max-width: 200px;
 	.content{
 		margin-left:0px;
 	}
-	.login-page{
+	.page-align{
 		flex-wrap: wrap;
 	}
 	.login-content{

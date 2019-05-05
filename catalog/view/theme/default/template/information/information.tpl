@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-<div class="login-page">
+<div class="page-align">
 <?php echo $column_left; ?>
 <div id="content">
   <div class="breadcrumb">
