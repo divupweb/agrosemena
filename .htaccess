@@ -1,0 +1,181 @@
+# 1.To use URL Alias you need to be running apache with mod_rewrite enabled. 
+
+# 2. In your opencart directory rename htaccess.txt to .htaccess.
+
+# For any support issues please visit: http://www.opencart.com
+
+Options +FollowSymlinks
+# Prevent Directoy listing 
+Options -Indexes
+
+# Prevent Direct Access to files
+<FilesMatch "\.(tpl|ini|log)">
+ Order deny,allow
+ Deny from all
+</FilesMatch>
+
+# SEO URL Settings
+RewriteEngine On
+RewriteRule ^shop/(.*) /90c29aa163e295126b713dda7ebba93e/$1 [L]
+RewriteRule ^shop(.*) /90c29aa163e295126b713dda7ebba93e/$1 [L]
+# If your opencart installation does not run on the main web folder make sure you folder it does run in ie. / becomes /shop/ 
+RewriteBase /
+# RewriteRule ^sitemap.xml$ index.php?route=feed/google_sitemap [L]
+# RewriteRule ^googlebase.xml$ index.php?route=feed/google_base [L]
+RewriteRule ^(.*)semena-optom(.*)$ $1semena$2 [QSA,L,R=301,NC]
+RewriteRule ^download/(.*) /index.php?route=error/not_found [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
+RewriteCond %{HTTP_HOST} ^www.agrosemena.ru
+RewriteRule ^(.*)$ http://agrosemena.ru/$1 [R=301,L] 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [R=301,L]
+# Redirect 301 /elki/ http://elki-2018.apishops.ru/
+Redirect 301 /lada/ http://agrosemena.ru/semena/vesovye-semena/lada-vesovye.php
+Redirect 301 /seyalka/ http://agrosemena.ru/ruchnaya-seyalka/ovoshhnaja-odnorjadnaja.php
+Redirect 301 /semena-opt/ http://agrosemena.ru/opt.php
+Redirect 301 /lend/ http://agrosemena.ru/ruchnaya-seyalka/ovoshhnaja-odnorjadnaja.php
+Redirect 301 /lada-by/ http://agrosemena.ru/semena/vesovye-semena/lada-vesovye.php
+Redirect 301 /contakti.php http://agrosemena.ru/contact-us/
+Redirect 301 /oplata-dostavka.php http://agrosemena.ru/oplata-tovara.php
+Redirect 301 /semena-optom.php http://agrosemena.ru/semena-optom/
+Redirect 301 /ukhod-za-sadom/grusha.php http://agrosemena.ru/grusha.php
+Redirect 301 /ukhod-za-sadom/krasnaya-smorodina.php http://agrosemena.ru/krasnaya-smorodina.php
+Redirect 301 /ukhod-za-sadom/kryzhovnik.php http://agrosemena.ru/kryzhovnik.php
+Redirect 301 /ukhod-za-sadom/malina.php http://agrosemena.ru/malina.php
+Redirect 301 /ukhod-za-sadom/obrezka-grushi.php http://agrosemena.ru/obrezka-grushi.php
+Redirect 301 /ukhod-za-sadom/obrezka-kryzhovnika.php http://agrosemena.ru/obrezka-kryzhovnika.php
+Redirect 301 /ukhod-za-sadom/obrezka-slivy.php http://agrosemena.ru/obrezka-slivy.php
+Redirect 301 /ukhod-za-sadom/obrezka-smorodiny.php http://agrosemena.ru/obrezka-smorodiny.php
+Redirect 301 /ukhod-za-sadom/obrezka-vinograda.php http://agrosemena.ru/obrezka-vinograda.php
+Redirect 301 /ukhod-za-sadom/obrezka-vishni.php http://agrosemena.ru/obrezka-vishni.php
+Redirect 301 /ukhod-za-sadom/obrezka-yablon.php http://agrosemena.ru/obrezka-yablon.php
+Redirect 301 /ukhod-za-sadom/posadka-vinograda.php http://agrosemena.ru/posadka-vinograda.php
+Redirect 301 /ukhod-za-sadom/privivka-vinograda.php http://agrosemena.ru/privivka-vinograda.php
+Redirect 301 /ukhod-za-sadom/privivka-yablon.php http://agrosemena.ru/privivka-yablon.php
+Redirect 301 /ukhod-za-sadom/razmnozhenie-smorodiny.php http://agrosemena.ru/razmnozhenie-smorodiny.php
+Redirect 301 /ukhod-za-sadom/razmnozhenie-vinograda.php http://agrosemena.ru/razmnozhenie-vinograda.php
+Redirect 301 /ukhod-za-sadom/sliva.php http://agrosemena.ru/sliva.php
+Redirect 301 /ukhod-za-sadom/smorodina.php http://agrosemena.ru/smorodina.php
+Redirect 301 /ukhod-za-sadom/ukhod-za-sadom.php http://agrosemena.ru/ukhod-za-sadom.php
+Redirect 301 /ukhod-za-sadom/vinograd.php http://agrosemena.ru/vinograd.php
+Redirect 301 /ukhod-za-sadom/vishnya.php http://agrosemena.ru/vishnya.php
+Redirect 301 /ukhod-za-sadom/vyrashchivanie-maliny.php http://agrosemena.ru/vyrashchivanie-maliny.php
+Redirect 301 /ukhod-za-sadom/vyrashchivanie-vinograda.php http://agrosemena.ru/vyrashchivanie-vinograda.php
+Redirect 301 /ukhod-za-sadom/vyrashchivanie-zemlyaniki.php http://agrosemena.ru/vyrashchivanie-zemlyaniki.php
+Redirect 301 /ukhod-za-sadom/zemlyanika.php http://agrosemena.ru/zemlyanika.php
+Redirect 301 /viraschivanie-ovoschey/arbuz.php http://agrosemena.ru/arbuz.php
+Redirect 301 /viraschivanie-ovoschey/baklazhan.php http://agrosemena.ru/baklazhan.php
+Redirect 301 /viraschivanie-ovoschey/dynya.php http://agrosemena.ru/dynya.php
+Redirect 301 /viraschivanie-ovoschey/fasol.php http://agrosemena.ru/fasol.php
+Redirect 301 /viraschivanie-ovoschey/gorokh.php http://agrosemena.ru/gorokh.php
+Redirect 301 /viraschivanie-ovoschey/kabachok.php http://agrosemena.ru/kabachok.php
+Redirect 301 /viraschivanie-ovoschey/kapusta.php http://agrosemena.ru/kapusta.php
+Redirect 301 /viraschivanie-ovoschey/kartofel.php http://agrosemena.ru/kartofel.php
+Redirect 301 /viraschivanie-ovoschey/kukuruza.php http://agrosemena.ru/kukuruza.php
+Redirect 301 /viraschivanie-ovoschey/luk.php http://agrosemena.ru/luk.php
+Redirect 301 /viraschivanie-ovoschey/morkov.php http://agrosemena.ru/morkov.php
+Redirect 301 /viraschivanie-ovoschey/ogurets.php http://agrosemena.ru/ogurets.php
+Redirect 301 /viraschivanie-ovoschey/perets.php http://agrosemena.ru/perets.php
+Redirect 301 /viraschivanie-ovoschey/petrushka.php http://agrosemena.ru/petrushka.php
+Redirect 301 /viraschivanie-ovoschey/podsolnechnik.php http://agrosemena.ru/podsolnechnik.php
+Redirect 301 /viraschivanie-ovoschey/redis.php http://agrosemena.ru/redis.php
+Redirect 301 /viraschivanie-ovoschey/redka.php http://agrosemena.ru/redka.php
+Redirect 301 /viraschivanie-ovoschey/repa.php http://agrosemena.ru/repa.php
+Redirect 301 /viraschivanie-ovoschey/selderei.php http://agrosemena.ru/selderei.php
+Redirect 301 /viraschivanie-ovoschey/svekla.php http://agrosemena.ru/svekla.php
+Redirect 301 /viraschivanie-ovoschey/tomat.php http://agrosemena.ru/tomat.php
+Redirect 301 /viraschivanie-ovoschey/tsukkini.php http://agrosemena.ru/tsukkini.php
+Redirect 301 /viraschivanie-ovoschey/tykva.php http://agrosemena.ru/tykva.php
+Redirect 301 /viraschivanie-ovoschey/ukrop.php http://agrosemena.ru/ukrop.php
+Redirect 301 /viraschivanie-ovoschey/viraschivanie-ovoschey.php http://agrosemena.ru/viraschivanie-ovoschey.php
+Redirect 301 /viraschivanie-ovoschey/ogurcy-v-teplice.php http://agrosemena.ru/ogurcy-v-teplice.php
+Redirect 301 /viraschivanie-ovoschey/rassada-ogurcov.php http://agrosemena.ru/rassada-ogurcov.php
+Redirect 301 /viraschivanie-ovoschey/sorta-ogurcov.php http://agrosemena.ru/sorta-ogurcov.php
+Redirect 301 /viraschivanie-ovoschey/rassada-tomatov.php http://agrosemena.ru/rassada-tomatov.php
+Redirect 301 /viraschivanie-ovoschey/tomaty-v-teplice.php http://agrosemena.ru/tomaty-v-teplice.php
+Redirect 301 /viraschivanie-ovoschey/khranenie-ovoshchei.php http://agrosemena.ru/khranenie-ovoshchei.php
+Redirect 301 /viraschivanie-ovoschey/bolgarsky-perets.php http://agrosemena.ru/bolgarsky-perets.php
+Redirect 301 /viraschivanie-ovoschey/kitaiskaya-redka.php http://agrosemena.ru/kitaiskaya-redka.php
+Redirect 301 /viraschivanie-ovoschey/poliv-ogurtsov.php http://agrosemena.ru/poliv-ogurtsov.php
+Redirect 301 /viraschivanie-ovoschey/pomidory-gigant-de-barao.php http://agrosemena.ru/pomidory-gigant-de-barao.php
+Redirect 301 /viraschivanie-ovoschey/podkormka-kapusty.php http://agrosemena.ru/podkormka-kapusty.php
+Redirect 301 /viraschivanie-ovoschey/poliv-kapusty.php http://agrosemena.ru/poliv-kapusty.php
+Redirect 301 /vyrashchivanie-tsvetov/tunbergiya.php http://agrosemena.ru/tunbergiya.php
+Redirect 301 /vyrashchivanie-tsvetov/tjulpany.php http://agrosemena.ru/tjulpany.php
+Redirect 301 /vyrashchivanie-tsvetov/cvety.php http://agrosemena.ru/cvety.php
+Redirect 301 /viraschivanie-ovoschey/chesnok.php http://agrosemena.ru/chesnok.php
+Redirect 301 /viraschivanie-ovoschey/luk-iz-sevka.php http://agrosemena.ru/luk-iz-sevka.php
+Redirect 301 /vyrashchivanie-tsvetov/kiparis.php http://agrosemena.ru/kiparis.php
+Redirect 301 /vyrashchivanie-tsvetov/balzamin.php http://agrosemena.ru/balzamin.php
+Redirect 301 /viraschivanie-ovoschey/luk-porej.php http://agrosemena.ru/luk-porej.php
+Redirect 301 /viraschivanie-ovoschey/topinambur.php http://agrosemena.ru/topinambur.php
+Redirect 301 /vyrashchivanie-tsvetov/rozmarin.php http://agrosemena.ru/rozmarin.php
+Redirect 301 /viraschivanie-ovoschey/sorta-kartofelja.php http://agrosemena.ru/sorta-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/posadka-kartofelja.php http://agrosemena.ru/posadka-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/sredstva-zashhity-udobrenija-kartofelja.php http://agrosemena.ru/sredstva-zashhity-udobrenija-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/prorashhivanie-kartofelja.php http://agrosemena.ru/prorashhivanie-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/vrediteli-bolezni-kartofelja.php http://agrosemena.ru/vrediteli-bolezni-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/sposoby-posadki-kartofelja.php http://agrosemena.ru/sposoby-posadki-kartofelja.php
+Redirect 301 /vyrashchivanie-tsvetov/petunija.php http://agrosemena.ru/petunija.php
+Redirect 301 /vyrashchivanie-tsvetov/pion-drevovidnyj.php http://agrosemena.ru/pion-drevovidnyj.php
+Redirect 301 /vyrashchivanie-tsvetov/tuberoza.php http://agrosemena.ru/tuberoza.php
+Redirect 301 /vyrashchivanie-tsvetov/orhideja.php http://agrosemena.ru/orhideja.php
+Redirect 301 /vyrashchivanie-tsvetov/margaritki.php http://agrosemena.ru/margaritki.php
+Redirect 301 /vyrashchivanie-tsvetov/rododendron.php http://agrosemena.ru/rododendron.php
+Redirect 301 /vyrashchivanie-tsvetov/klematisy.php http://agrosemena.ru/klematisy.php
+Redirect 301 /viraschivanie-ovoschey/belokochannaja-kapusta.php http://agrosemena.ru/belokochannaja-kapusta.php
+Redirect 301 /viraschivanie-ovoschey/brjusselskaja-kapusta.php http://agrosemena.ru/brjusselskaja-kapusta.php
+Redirect 301 /viraschivanie-ovoschey/dekorativnaja-kapusta.php http://agrosemena.ru/dekorativnaja-kapusta.php
+Redirect 301 /viraschivanie-ovoschey/kapusta-brokkoli.php http://agrosemena.ru/kapusta-brokkoli.php
+Redirect 301 /viraschivanie-ovoschey/kapusta-kolrabi.php http://agrosemena.ru/kapusta-kolrabi.php
+Redirect 301 /viraschivanie-ovoschey/krasnokochannaja-kapusta.php http://agrosemena.ru/krasnokochannaja-kapusta.php
+Redirect 301 /viraschivanie-ovoschey/pekinskaja-kapusta.php http://agrosemena.ru/pekinskaja-kapusta.php
+Redirect 301 /viraschivanie-ovoschey/savojskaja-kapusta.php http://agrosemena.ru/savojskaja-kapusta.php
+Redirect 301 /viraschivanie-ovoschey/cvetnaja-kapusta.php http://agrosemena.ru/cvetnaja-kapusta.php
+Redirect 301 /poleznye-svojstva/ezhevika.php http://agrosemena.ru/ezhevika.php
+Redirect 301 /poleznye-svojstva/klever-lugovoj.php http://agrosemena.ru/klever-lugovoj.php
+Redirect 301 /vyrashchivanie-tsvetov/orhideja-ne-cvetet.php http://agrosemena.ru/orhideja-ne-cvetet.php
+Redirect 301 /ukhod-za-sadom/privivka-plodovyh-derevev.php http://agrosemena.ru/ukhod-za-sadom/privivka-plodovyh-derevev.php
+Redirect 301 /viraschivanie-ovoschey/fitoftoroz-kartofelja.php http://agrosemena.ru/fitoftoroz-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/uhod-za-kartofelem.php http://agrosemena.ru/uhod-za-kartofelem.php
+Redirect 301 /viraschivanie-ovoschey/sroki-posadki-kartofelja.php http://agrosemena.ru/sroki-posadki-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/shema-posadki-kartofelja.php http://agrosemena.ru/shema-posadki-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/metody-posadki-kartofelja.php http://agrosemena.ru/metody-posadki-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/izvestkovanie-pochvy-pod-kartofel.php http://agrosemena.ru/izvestkovanie-pochvy-pod-kartofel.php
+Redirect 301 /viraschivanie-ovoschey/poliv-kartofelja.php http://agrosemena.ru/poliv-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/mineralnye-udobrenija-pod-kartofel.php http://agrosemena.ru/mineralnye-udobrenija-pod-kartofel.php
+Redirect 301 /viraschivanie-ovoschey/organicheskie-udobrenija-dlja-kartofelja.php http://agrosemena.ru/organicheskie-udobrenija-dlja-kartofelja.php
+Redirect 301 /viraschivanie-ovoschey/pochva-pod-kartofel.php http://agrosemena.ru/pochva-pod-kartofel.php
+Redirect 301 /uborka-kormovoi-svekli.php http://agrosemena.ru/uborka-svekli.php
+Redirect 301 /ruchnaya-seyalka.php /ruchnaya-seyalka/ovoshhnaja-odnorjadnaja.php
+### Additional Settings that may need to be enabled for some servers 
+
+### Additional Settings that may need to be enabled for some servers 
+### Uncomment the commands by removing the # sign in front of it.
+### If you get an "Internal Server Error 500" after enabling any of the following settings, restore the # as this means your host doesn't allow that.
+
+# 1. If your cart only allows you to add one item at a time, it is possible register_globals is on. This may work to disable it:
+# php_flag register_globals off
+
+# 2. If your cart has magic quotes enabled, This may work to disable it:
+# php_flag magic_quotes_gpc Off
+
+# 3. Set max upload file size. Most hosts will limit this and not allow it to be overridden but you can try
+# php_value upload_max_filesize 999M
+
+# 4. set max post size. uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields
+# php_value post_max_size 999M
+
+# 5. set max time script can take. uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields
+# php_value max_execution_time 200
+
+# 6. set max time for input to be recieved. Uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields
+# php_value max_input_time 200
+
+# 7. disable open_basedir limitations
+# php_admin_value open_basedir none

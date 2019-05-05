@@ -1,0 +1,56 @@
+---------- Date: 2019-05-03 11:08:23 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /semena/
+MOD DETAILS:
+   modFile   : X:\home\agrosemena.test\www\vqmod/xml/vqmod_ocu_waitlist.xml
+   id        : OCU Waitlist
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Eugene Kuligin by Ukrainian OpenCart Development Team
+
+File Name    : catalog/view/theme/default/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-05-03 14:30:21 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /semena/vesovye-semena/lada-vesovye.php
+MOD DETAILS:
+   modFile   : X:\home\agrosemena.test\www\vqmod/xml/vqmod_ocu_waitlist.xml
+   id        : OCU Waitlist
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Eugene Kuligin by Ukrainian OpenCart Development Team
+
+File Name    : catalog/view/theme/default/template/product/product.tpl(3)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-05-03 19:25:11 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /semena/vesovye-semena/lada-vesovye.php
+MOD DETAILS:
+   modFile   : X:\home\agrosemena.test\www\vqmod/xml/vqmod_ocu_waitlist.xml
+   id        : OCU Waitlist
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Eugene Kuligin by Ukrainian OpenCart Development Team
+
+File Name    : catalog/view/theme/default/template/product/product.tpl(3)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
+----------------------------------------------------------------------
+
+
+---------- Date: 2019-05-03 20:46:10 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /ruchnaya-seyalka/
+MOD DETAILS:
+   modFile   : X:\home\agrosemena.test\www\vqmod/xml/vqmod_ocu_waitlist.xml
+   id        : OCU Waitlist
+   version   : 1.0
+   vqmver    : 2.1.5
+   author    : Eugene Kuligin by Ukrainian OpenCart Development Team
+
+File Name    : catalog/view/theme/default/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" />
+----------------------------------------------------------------------
+
+
